@@ -1,23 +1,59 @@
-import React, { Component } from 'react';
-import PreviewColumn from '../../PreviewColumn/PreviewColumn';
+import React, { useContext } from 'react';
+import AppContext from '../../../AppContext';
 import './style.css';
 
-class EducationForm extends Component {
+function EducationForm() {
 
-    
+    const updateText = useContext(AppContext);
 
-    render() {
-        return (
-            <div>
-                <input 
-                    type="text"
-                    name="schoolName"
-                    onChange={ (event) => console.log('typed') } />
-                <button>Add</button>
-            </div>
-        )
-    }
+    return (
+        <div className="education-form">
+            <p className="education-title">Education</p>
+            <input 
+                type="text"
+                name="schoolName"
+                placeholder="School Name"
+                value={updateText.schoolName}
+                onChange={e => updateText.setSchoolName(e.target.value)}
+            />
+            <input 
+                type="text"
+                name="schoolCity"
+                placeholder="City"
+                value={updateText.schoolCity}
+                onChange={e => updateText.setSchoolCity(e.target.value)}
+            />
+            <input 
+                type="text"
+                name="schoolDegree"
+                placeholder="Degree"
+                value={updateText.schoolDegree}
+                onChange={e => updateText.setSchoolDegree(e.target.value)}
+            />
+            <input 
+                type="text"
+                name="schoolSubject"
+                placeholder="Major"
+                value={updateText.schoolSubject}
+                onChange={e => updateText.setSchoolSubject(e.target.value)}
+            />
+            <input 
+                type="text"
+                name="schoolStart"
+                placeholder="Start Date"
+                value={updateText.schoolStart}
+                onChange={e => updateText.setSchoolStart(e.target.value)}
+            />
+            <input 
+                type="text"
+                name="schoolEnd"
+                placeholder="End Date"
+                value={updateText.schoolEnd}
+                onChange={e => updateText.setSchoolEnd(e.target.value)}
+            />
+            <button className="education-add">ADD</button>
+        </div>
+    );
 }
-
 
 export default EducationForm;

@@ -1,0 +1,33 @@
+.personal-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 10fr;
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+}
+
+.personal-title {
+    margin-left: 1.5rem;
+    font-size: 1.6rem;
+}
+
+input {
+    width: 95%;
+    line-height: 2;
+    margin: 0 auto;
+    background-color: #141b24;
+    border-radius: 0.3rem;
+}
+
+#personal-info-textbox {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #141b24;
+    border-radius: 0.3rem;
+    margin-bottom: 1rem;
+    padding: 1em;
+}
+
+#personal-info-textbox::-webkit-input-placeholder {
+    text-align: center;
+}

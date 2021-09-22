@@ -2,7 +2,22 @@
   text-align: center;
 }
 
-.sticky {
-  position: sticky;
-  top: 10px;
+#form-column {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #293546;
 }
+
+#form-column::-webkit-scrollbar {
+  width: 11px;
+}
+
+#form-column::-webkit-scrollbar-track {
+  background: #495b66;
+}
+
+#form-column::-webkit-scrollbar-thumb {
+  background: #171f24;
+  border-radius: 3px;
+  border: 1px solid #36444d;
+} 

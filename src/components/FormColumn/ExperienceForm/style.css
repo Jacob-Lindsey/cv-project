@@ -1,0 +1,33 @@
+.experience-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr ;
+    gap: 0.8rem;
+    margin-bottom: 3rem;
+}
+
+.experience-title {
+    margin-left: 1.5rem;
+    font-size: 1.6rem;
+}
+
+input {
+    width: 95%;
+    line-height: 2;
+    margin: 0 auto;
+    background-color: #141b24;
+    border-radius: 0.3rem;
+    color: #bebebe;
+    padding-left: 3%;
+}
+
+input::placeholder, textarea::placeholder {
+    opacity: 0.5;
+}
+
+.experience-add {
+    background-color: #036046;
+    width: 20%;
+    margin-left: 1.5rem;
+    border-radius: 0.3rem;
+}

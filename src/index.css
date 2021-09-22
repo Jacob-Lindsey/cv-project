@@ -11,6 +11,35 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #181a1b;
   color: #d9d9d9;
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #54595c;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #171f24;
+  border-radius: 3px;
+  border: 1px solid #36444d;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill {
+  transition: all 2147483647s;
+}
+
+input:focus {
+  outline: #abb0b638;
 }
 
 code {

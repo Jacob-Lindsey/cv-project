@@ -6,7 +6,9 @@ class Header extends Component {
     render() {
         return (
         <div className="header-container">
-            <h1>HEADER</h1>
+            <div className="header-inner">
+                <h1>CV to PDF</h1>
+            </div>
         </div>
         )
     }

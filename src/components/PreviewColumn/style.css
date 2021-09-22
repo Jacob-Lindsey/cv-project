@@ -3,14 +3,15 @@
 .preview-text {
     border-bottom: 1px solid #727c8b96;
     height: 2.5rem;
+    line-height: 2.9rem;
 }
 
 .start-end {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 10px 1fr;
 }
 
-#schoolStart, #schoolEnd {
+#schoolStart, #schoolEnd, #expStart, #expEnd {
     height: 2.5rem;
     width: 100%;
     margin: 0;
@@ -105,6 +106,6 @@ section {
 
 .personal-text {
     word-wrap: break-word;
-    margin-top: 2.5rem;
+    margin-top: 0.3rem;
     padding: 1rem;
 }

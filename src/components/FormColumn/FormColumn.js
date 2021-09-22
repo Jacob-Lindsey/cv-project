@@ -8,20 +8,14 @@ class FormColumn extends Component {
     constructor() {
         super();
         this.state = {
-          text: ''
         }
       }
 
     render() {
-
-        const handleSubmit = event => {
-            event.preventDefault();
-            alert('Form submitted.')
-        }
-
+        
         return (
         <div className="form-column-container">
-            <form onSubmit={handleSubmit}>
+            <form>
                 <EducationForm />
                 <ExperienceForm />
                 <PersonalForm />

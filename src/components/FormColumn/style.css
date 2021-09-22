@@ -1,5 +1,9 @@
 /* FORM COLUMN */ 
 
+.form-column-container {
+    height: 100%;
+}
+
 .form-column-container h1 {
     text-align: center;
     line-height: 2em;
