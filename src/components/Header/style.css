@@ -8,7 +8,8 @@
 
 .header-inner {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
     padding: 0.5rem 8rem;
     max-width: 1800px;
     margin: 0 auto;
@@ -17,4 +18,19 @@
 .header-container h1 {
     line-height: 2em;
     font-size: 3rem;
+}
+
+.pdf-button {
+    background-color: #9e7c0d;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 8rem;
+    height: 4rem;
+    margin: auto 0;
+    border-radius: 0.4rem;
+}
+
+.pdf-button:hover {
+    background-color: #b68f0f;
 }

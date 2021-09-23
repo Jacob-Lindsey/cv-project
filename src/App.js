@@ -24,6 +24,8 @@ const  App = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [description, setDescription] = useState('');
+  const [educationSections, setEducationSections] = useState([]);
+  const [experienceSections, setExperienceSections] = useState([]);
 
   const inputValues = {
     schoolName,
@@ -60,17 +62,21 @@ const  App = () => {
     setPhoneNumber,
     setEmail,
     setDescription,
+    educationSections,
+    experienceSections,
+    setEducationSections,
+    setExperienceSections,
   };
 
     return (
       <AppContext.Provider value={inputValues}>
         <div>
           <Header />
-          <div className="container flex mx-auto flex-row h-screen">
-            <div className="bg-secondary flex-initial min-w-1/2 mr-4 p-4 h-5/6" id="form-column">
+          <div className="2xl:container flex mx-auto 2xl:flex-row h-screen">
+            <div className="bg-secondary flex-initial min-w-1/2 mr-4 p-4 h-5/6 column-col">
               <FormColumn />
             </div>
-            <div className="bg-secondary min-w-1/2 ml-4 h-5/6">
+            <div className="bg-secondary min-w-1/2 ml-4 h-5/6 column-col">
               <PreviewColumn />
             </div>    
           </div>

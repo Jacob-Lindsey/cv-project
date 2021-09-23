@@ -2,21 +2,21 @@
   text-align: center;
 }
 
-#form-column {
+.column-col {
   overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: #293546;
 }
 
-#form-column::-webkit-scrollbar {
+.column-col::-webkit-scrollbar {
   width: 11px;
 }
 
-#form-column::-webkit-scrollbar-track {
+.column-col::-webkit-scrollbar-track {
   background: #495b66;
 }
 
-#form-column::-webkit-scrollbar-thumb {
+.column-col::-webkit-scrollbar-thumb {
   background: #171f24;
   border-radius: 3px;
   border: 1px solid #36444d;

@@ -1,10 +1,27 @@
 import React, { useContext } from 'react';
 import AppContext from '../../../AppContext';
+import SectionData from '../../SectionData/SectionData';
 import './style.css';
 
 function ExperienceForm() {
 
     const updateText = useContext(AppContext);
+    const onButtonClick = (e) => {
+        e.preventDefault();
+        let formattedData = {
+            expPosition: updateText.expPosition,
+            expCompany: updateText.expCompany,
+            expCity: updateText.expCity,
+            expStart: updateText.expStart,
+            expEnd: updateText.expEnd
+        }
+        updateText.setExperienceSections(prev => ([...prev, formattedData]));
+        updateText.setExpPosition('');
+        updateText.setExpCompany('');
+        updateText.setExpCity('');
+        updateText.setExpStart('');
+        updateText.setExpEnd('');
+    }
 
     return (
         <div className="experience-form">
@@ -44,7 +61,7 @@ function ExperienceForm() {
                 value={updateText.expEnd}
                 onChange={e => updateText.setExpEnd(e.target.value)}
             />
-            <button className="experience-add">ADD</button>
+            <button className="experience-add" onClick={onButtonClick}>ADD</button>
         </div>
     );
 }

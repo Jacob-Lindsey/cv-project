@@ -5,6 +5,24 @@ import './style.css';
 function EducationForm() {
 
     const updateText = useContext(AppContext);
+    const onButtonClick = (e) => {
+        e.preventDefault();
+        let formattedData = {
+            schoolStart: updateText.schoolStart,
+            schoolEnd: updateText.schoolEnd,
+            schoolName: updateText.schoolName,
+            schoolCity: updateText.schoolCity,
+            schoolDegree: updateText.schoolDegree,
+            schoolSubject: updateText.schoolSubject
+        }
+        updateText.setEducationSections(prev => ([...prev, formattedData]));
+        updateText.setSchoolStart('');
+        updateText.setSchoolEnd('');
+        updateText.setSchoolName('');
+        updateText.setSchoolCity('');
+        updateText.setSchoolDegree('');
+        updateText.setSchoolSubject('');
+    }          
 
     return (
         <div className="education-form">
@@ -19,7 +37,7 @@ function EducationForm() {
             <input 
                 type="text"
                 name="schoolCity"
-                placeholder="City"
+                placeholder="City, State"
                 value={updateText.schoolCity}
                 onChange={e => updateText.setSchoolCity(e.target.value)}
             />
@@ -51,7 +69,7 @@ function EducationForm() {
                 value={updateText.schoolEnd}
                 onChange={e => updateText.setSchoolEnd(e.target.value)}
             />
-            <button className="education-add">ADD</button>
+            <button className="education-add" onClick={onButtonClick}>ADD</button>
         </div>
     );
 }

@@ -25,3 +25,7 @@ input {
     margin-left: 1.5rem;
     border-radius: 0.3rem;
 }
+
+.education-add:hover {
+    background-color: #047958;
+}
