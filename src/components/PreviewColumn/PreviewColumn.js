@@ -1,9 +1,10 @@
 import React, { useContext } from 'react';
+import EditableLabel from 'react-inline-editing';
 import AppContext from '../../AppContext';
 import PreviewSection from './PreviewSection';
 import './style.css';
 
-const PreviewColumn = () => {
+const PreviewColumn = React.forwardRef((props, ref) => {
 
   const inputText = useContext(AppContext);
 
@@ -19,14 +20,14 @@ const PreviewColumn = () => {
                   return <div key={index} className="preview-section submitted">
                           <div className="preview-text start-end">
                             <div className="date-text">
-                              {item.schoolStart}&nbsp;&nbsp;-&nbsp;&nbsp;{item.schoolEnd}
+                            <EditableLabel text={item.schoolStart} inputWidth="100px" />&nbsp;&nbsp;-&nbsp;&nbsp;<EditableLabel text={item.schoolEnd} inputWidth="100px" />
                             </div>
                             <div className="preview-text school-name-location">
-                              {item.schoolName},&nbsp;&nbsp;{item.schoolCity}
+                              <EditableLabel text={item.schoolName} inputWidth="120px" />,&nbsp;&nbsp;<EditableLabel text={item.schoolCity} inputWidth="120px" />
                             </div>
                           </div>
-                          <div className="preview-text degree">{item.schoolDegree}</div>
-                          <div className="preview-text subject">{item.schoolSubject}</div>
+                          <div className="preview-text degree"><EditableLabel text={item.schoolDegree} inputWidth="140px" /></div>
+                          <div className="preview-text subject"><EditableLabel text={item.schoolSubject} inputWidth="190px" /></div>
                         </div>
                 })
               }
@@ -43,12 +44,12 @@ const PreviewColumn = () => {
                   return <div key={index} className="preview-section submitted">
                           <div className="preview-text start-end">
                             <div className="date-text">
-                              {item.expStart}&nbsp;&nbsp;-&nbsp;&nbsp;{item.expEnd}
+                              <EditableLabel text={item.expStart} inputWidth="100px" />&nbsp;&nbsp;-&nbsp;&nbsp;<EditableLabel text={item.expEnd} inputWidth="100px" />
                             </div>
-                            <div className="preview-text position">{item.expPosition}</div>
+                            <div className="preview-text position"><EditableLabel text={item.expPosition} inputWidth="140px" /></div>
                           </div>
                             <div className="preview-text company-name-location">
-                              {item.expCompany},&nbsp;&nbsp;&nbsp;{item.expCity}
+                              <EditableLabel text={item.expCompany} inputWidth="120px" />,&nbsp;&nbsp;&nbsp;<EditableLabel text={item.expCity} inputWidth="140px" />
                             </div>                         
                         </div>
                 })
@@ -60,7 +61,7 @@ const PreviewColumn = () => {
   }
 
   return (
-    <div className="preview-column-container">
+    <div className="preview-column-container" ref={ref}>
 
         <div className="preview-column-header">
           <img src="https://via.placeholder.com/300" alt="" />
@@ -101,7 +102,7 @@ const PreviewColumn = () => {
         </div>
     </div>
     )
-  }
+  });
 
 
 export default PreviewColumn;

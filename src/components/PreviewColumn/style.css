@@ -10,7 +10,6 @@
 
 .degree, .subject {
     text-align: right;
-    padding-right: 1%;
 }
 
 .start-end {
@@ -79,7 +78,7 @@
     text-align: left;
     font-weight: 300;
 }
-
+ 
 .preview-column-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -117,8 +116,9 @@ section {
     display: grid;
     grid-auto-rows: 1fr;
     gap: 10px;
-    padding-left: 0.5rem;
-    padding-right: 2.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 0.5rem;
 }
 
 .preview-section .preview-text {
@@ -137,6 +137,12 @@ img {
 
 .date-text {
     font-weight: 600;
+    display: flex;
+}
+
+.school-name-location {
+    display: flex;
+    justify-content: flex-end;
 }
 
 .school-name-location, .position {
@@ -145,9 +151,13 @@ img {
 }
 
 .company-name-location {
+    display: flex;
+    justify-content: flex-end;
     text-align: right;
 }
 
 .submitted {
     background-color: #253c5f52;
+    min-height: 126px;
+    margin-bottom: 10px;
 }

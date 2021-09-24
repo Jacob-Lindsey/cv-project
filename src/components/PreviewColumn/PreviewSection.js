@@ -18,7 +18,6 @@ const PreviewSection = ({requestedSection}) => {
                               <div className="preview-text degree">{inputText.schoolDegree}</div>
                               <div className="preview-text subject">{inputText.schoolSubject}</div>
                             </div>
-                            
 
   const experienceSection = <div className="preview-section">
                               <div className="preview-text start-end">
@@ -36,7 +35,6 @@ const PreviewSection = ({requestedSection}) => {
 
   return section;
 }
-
 
 export default PreviewSection;
 

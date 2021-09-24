@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import AppContext from '../../../AppContext';
-import SectionData from '../../SectionData/SectionData';
 import './style.css';
 
 function ExperienceForm() {
