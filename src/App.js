@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
-import FormColumn from './components/FormColumn/FormColumn';
-import PreviewColumn from './components/PreviewColumn/PreviewColumn';
+import FormColumn from './components/Form/FormColumn';
+import PreviewColumn from './components/Preview/PreviewColumn';
 import AppContext from './AppContext';
 
 const  App = () => {

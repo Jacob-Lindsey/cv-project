@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import EducationForm from './EducationForm/EducationForm';
-import ExperienceForm from './ExperienceForm/ExperienceForm';
-import PersonalForm from './PersonalForm/PersonalForm';
-import './style.css';
+import styled from 'styled-components';
+import EducationForm from './EducationForm';
+import ExperienceForm from './ExperienceForm';
+import PersonalForm from './PersonalForm';
 
 class FormColumn extends Component {
     constructor() {
@@ -14,16 +14,20 @@ class FormColumn extends Component {
     render() {
         
         return (
-        <div className="form-column-container">
+        <FormContainer>
             <form>
                 <EducationForm />
                 <ExperienceForm />
                 <PersonalForm />
             </form>
-        </div>
+        </FormContainer>
         )
     }
 }
 
 
 export default FormColumn;
+
+const FormContainer = styled.div`
+    height: 100%;
+`;
