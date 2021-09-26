@@ -1,5 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
+import Cleave from 'cleave.js/react';
+import "cleave.js/dist/addons/cleave-phone.us";
 import AppContext from '../../AppContext';
 
 function PersonalForm() {
@@ -30,9 +32,9 @@ function PersonalForm() {
                 value={updateText.address}
                 onChange={e => updateText.setAddress(e.target.value)}
             />
-            <InputWrapper
+            <FormattedPhoneNumber
                 type="tel"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                options={{ phone: true, phoneRegionCode: "US", delimiter: '-' }}
                 name="phoneNumber"
                 placeholder="Phone Number"
                 value={updateText.phoneNumber}
@@ -86,21 +88,26 @@ const InputWrapper = styled.input`
     }
 `;
 
+const FormattedPhoneNumber = styled(Cleave)`
+    width: 95%;
+    line-height: 2;
+    margin: 0 auto;
+    background-color: #141b24;
+    border-radius: 0.3rem;
+    padding-left: 2%;
+    &::placeholder {
+        opacity: 0.5;
+    }
+`;
+
 const TextareaWrapper = styled.textarea`
     width: 95%;
     margin: 0 auto;
     background-color: #141b24;
     border-radius: 0.3rem;
     margin-bottom: 1rem;
-    padding: 1em;  
-`;
-
-const ButtonWrapper = styled.button`
-    background-color: #036046;
-    width: 20%;
-    margin-left: 1.5rem;
-    border-radius: 0.3rem;
-    &:hover {
-        background-color: #047958;
+    padding: 1em;
+    &::placeholder {
+        opacity: 0.5;
     }
 `;

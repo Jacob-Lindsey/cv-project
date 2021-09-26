@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from '../../AppContext';
+import DateFormatter from '../DateFormatter/DateFormatter';
 
 function ExperienceForm() {
 
@@ -46,20 +47,22 @@ function ExperienceForm() {
                 value={updateText.expCity}
                 onChange={e => updateText.setExpCity(e.target.value)}
             />
-            <InputWrapper
-                type="text"
-                name="expStart"
-                placeholder="Start Date"
-                value={updateText.expStart}
-                onChange={e => updateText.setExpStart(e.target.value)}
-            />
-            <InputWrapper
-                type="text"
-                name="expEnd"
-                placeholder="End Date"
-                value={updateText.expEnd}
-                onChange={e => updateText.setExpEnd(e.target.value)}
-            />
+            <StartEndWrapper>
+                <DateFormatter
+                    type="text"
+                    name="expStart"
+                    placeholder="Start Date"
+                    value={updateText.expStart}
+                    onChange={e => updateText.setExpStart(e.target.value)}
+                />
+                <DateFormatter
+                    type="text"
+                    name="expEnd"
+                    placeholder="End Date"
+                    value={updateText.expEnd}
+                    onChange={e => updateText.setExpEnd(e.target.value)}
+                />
+            </StartEndWrapper>
             <ButtonWrapper onClick={onButtonClick}>ADD</ButtonWrapper>
         </FormContainer>
     );
@@ -71,7 +74,7 @@ export default ExperienceForm;
 const FormContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0.8rem;
     margin-bottom: 3rem;
 `;
@@ -90,6 +93,26 @@ const InputWrapper = styled.input`
     padding-left: 2%;
     &::placeholder {
         opacity: 0.5;
+    }
+`;
+
+const StartEndWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    line-height: 2;
+    margin: 0 auto;
+    & input {
+        line-height: 2;
+        margin: 0;
+        width: 49%;
+        background-color: #141b24;
+        border-radius: 0.3rem;
+        padding-left: 2%;
+        &::placeholder {
+            opacity: 0.5;
+        }
     }
 `;
 

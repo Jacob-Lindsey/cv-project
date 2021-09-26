@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from '../../AppContext';
+import DateFormatter from '../DateFormatter/DateFormatter';
 
 function EducationForm() {
 
@@ -55,20 +56,24 @@ function EducationForm() {
                 value={updateText.schoolSubject}
                 onChange={e => updateText.setSchoolSubject(e.target.value)}
             />
-            <InputWrapper
-                type="text"
-                name="schoolStart"
-                placeholder="Start Date"
-                value={updateText.schoolStart}
-                onChange={e => updateText.setSchoolStart(e.target.value)}
-            />
-            <InputWrapper
-                type="text"
-                name="schoolEnd"
-                placeholder="End Date"
-                value={updateText.schoolEnd}
-                onChange={e => updateText.setSchoolEnd(e.target.value)}
-            />
+            <StartEndWrapper>
+                <DateFormatter
+                    className="half"
+                    type="text"
+                    name="schoolStart"
+                    placeholder="Start Date"
+                    value={updateText.schoolStart}
+                    onChange={e => updateText.setSchoolStart(e.target.value)}
+                />
+                <DateFormatter
+                    className="half"
+                    type="text"
+                    name="schoolEnd"
+                    placeholder="End Date"
+                    value={updateText.schoolEnd}
+                    onChange={e => updateText.setSchoolEnd(e.target.value)}
+                />
+            </StartEndWrapper>
             <ButtonWrapper onClick={onButtonClick}>ADD</ButtonWrapper>
         </FormContainer>
     );
@@ -79,7 +84,7 @@ export default EducationForm;
 const FormContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
     gap: 0.8rem;
     margin-bottom: 3rem;
 `;
@@ -98,6 +103,26 @@ const InputWrapper = styled.input`
     padding-left: 2%;
     &::placeholder {
         opacity: 0.5;
+    }
+`;
+
+const StartEndWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    line-height: 2;
+    margin: 0 auto;
+    & input {
+        line-height: 2;
+        margin: 0;
+        width: 49%;
+        background-color: #141b24;
+        border-radius: 0.3rem;
+        padding-left: 2%;
+        &::placeholder {
+            opacity: 0.5;
+        }
     }
 `;
 
