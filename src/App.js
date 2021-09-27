@@ -26,6 +26,7 @@ const  App = () => {
   const [description, setDescription] = useState('');
   const [educationSections, setEducationSections] = useState([]);
   const [experienceSections, setExperienceSections] = useState([]);
+  const [userAvatar, setUserAvatar] = useState('../../assets/avatar.png');
 
   const inputValues = {
     schoolName,
@@ -66,6 +67,8 @@ const  App = () => {
     experienceSections,
     setEducationSections,
     setExperienceSections,
+    userAvatar,
+    setUserAvatar,
   };
 
     return (

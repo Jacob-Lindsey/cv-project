@@ -15,7 +15,6 @@ const CreatePDFButton = () => {
                       <PreviewColumn ref={columnRef} />
                     </div>
                   </>
-
   return button;
 }
 

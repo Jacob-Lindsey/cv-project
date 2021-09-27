@@ -33,6 +33,7 @@ function PersonalForm() {
                 onChange={e => updateText.setAddress(e.target.value)}
             />
             <FormattedPhoneNumber
+                className="phone"
                 type="tel"
                 options={{ phone: true, phoneRegionCode: "US", delimiter: '-' }}
                 name="phoneNumber"

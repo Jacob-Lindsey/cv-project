@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import EditableLabel from 'react-inline-editing'
 import AppContext from '../../AppContext'
 import PreviewSection from './PreviewSection'
+import Avatar from '../../assets/avatar.png'
 
 const PreviewColumn = React.forwardRef((props, ref) => {
   const inputText = useContext(AppContext)
@@ -94,7 +95,7 @@ const PreviewColumn = React.forwardRef((props, ref) => {
   return (
     <PreviewColumnContainer ref={ref}>
       <PreviewHeader>
-        <div draggable='true'></div>
+        <UserAvatar src={Avatar} />
         <HeaderContentContainer>
           <Name>
             {inputText.firstName} {inputText.lastName}
@@ -152,6 +153,13 @@ const PreviewHeader = styled.div`
   padding: 1rem;
 `
 
+const UserAvatar = styled.img`
+  padding: 1rem;
+  width: 100%;
+  margin: auto 0;
+  opacity: 0.6;
+`
+
 const HeaderContentContainer = styled.div`
   display: grid;
   gap: 2px 0px;
@@ -206,7 +214,8 @@ const SectionDivider = styled.hr`
   color: #b7b9bdc2;
   margin: 0 auto;
   margin-bottom: 0.5rem;
-  width: 100%;
+  width: 96%;
+  opacity: 0.7;
 `
 
 const SectionTitle = styled.h2`
@@ -220,6 +229,7 @@ const SubmittedSection = styled.div`
   display: grid;
   grid-auto-rows: 1fr;
   gap: 10px;
+  font-size: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 0.5rem;
@@ -236,12 +246,12 @@ const SectionContent = styled.div`
   height: 2.1rem;
   line-height: 2.5rem;
   margin: 0 auto;
-  font-size: 1.3rem;
 `
 
 const ExperienceDate = styled.div`
   display: flex;
   font-weight: 600;
+  font-style: italic;
 `
 
 const Position = styled.div`
@@ -263,6 +273,9 @@ const Company = styled.div`
   margin: 0 auto;
   min-width: 100%;
   text-align: right;
+  & input {
+    background-color: #19212c;
+  }
 `
 
 const DateText = styled.div`

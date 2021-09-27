@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from '../../AppContext';
-import DateFormatter from '../DateFormatter/DateFormatter';
+import Cleave from 'cleave.js/react';
 
 function EducationForm() {
 
@@ -58,7 +58,8 @@ function EducationForm() {
             />
             <StartEndWrapper>
                 <DateFormatter
-                    className="half"
+                    className="half1"
+                    options={{ date: true, datePattern: ["m", "d", "Y"] }}
                     type="text"
                     name="schoolStart"
                     placeholder="Start Date"
@@ -66,7 +67,8 @@ function EducationForm() {
                     onChange={e => updateText.setSchoolStart(e.target.value)}
                 />
                 <DateFormatter
-                    className="half"
+                    className="half2"
+                    options={{ date: true, datePattern: ["m", "d", "Y"] }}
                     type="text"
                     name="schoolEnd"
                     placeholder="End Date"
@@ -98,6 +100,18 @@ const InputWrapper = styled.input`
     width: 95%;
     line-height: 2;
     margin: 0 auto;
+    background-color: #141b24;
+    border-radius: 0.3rem;
+    padding-left: 2%;
+    &::placeholder {
+        opacity: 0.5;
+    }
+`;
+
+const DateFormatter = styled(Cleave)`
+    line-height: 2;
+    margin: 0;
+    width: 49%;
     background-color: #141b24;
     border-radius: 0.3rem;
     padding-left: 2%;

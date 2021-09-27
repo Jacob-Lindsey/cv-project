@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import CreatePDFButton from '../CreatePDFButton/CreatePDFButton';
+import LoadSampleButton from '../LoadSampleButton.js/LoadSampleButton';
 
 class Header extends Component {
 
@@ -12,6 +13,7 @@ class Header extends Component {
                         CV to PDF
                     </HeaderTitle>
                     <ButtonContainer>
+                        <LoadSampleButton />
                         <CreatePDFButton />
                     </ButtonContainer>
                 </HeaderFlex>
@@ -47,6 +49,6 @@ const HeaderTitle = styled.div`
 const ButtonContainer = styled.div`
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
-    width: 18%;
+    justify-content: space-evenly;
+    width: 24%;
 `;

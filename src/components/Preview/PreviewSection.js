@@ -62,12 +62,12 @@ const SectionContent = styled.div`
   height: 2.1rem;
   line-height: 2.5rem;
   margin: 0 auto;
-  font-size: 1.3rem;
 `
 
 const ExperienceDate = styled.div`
   display: flex;
   font-weight: 600;
+  font-style: italic;
 `
 
 const Position = styled.div`
@@ -94,12 +94,14 @@ const Company = styled.div`
 const DateText = styled.div`
   display: flex;
   font-weight: 600;
+  font-style: italic;
 `
 
 const School = styled.div`
   display: flex;
   justify-content: flex-end;
   font-size: 1.3rem;
+  font-weight: 600;
   height: 2.1rem;
   line-height: 2.5rem;
   margin: 0 auto;
@@ -111,6 +113,6 @@ const DegreeSubject = styled.div`
   height: 2.1rem;
   line-height: 2.5rem;
   margin: 0 auto;
-  font-size: 1.3rem;
+  font-size: 1rem;
   text-align: right;
 `

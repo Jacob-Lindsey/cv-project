@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import AppContext from '../../AppContext';
-import DateFormatter from '../DateFormatter/DateFormatter';
+import Cleave from 'cleave.js/react';
 
 function ExperienceForm() {
 
@@ -50,6 +50,7 @@ function ExperienceForm() {
             <StartEndWrapper>
                 <DateFormatter
                     type="text"
+                    options={{ date: true, datePattern: ["m", "d", "Y"] }}
                     name="expStart"
                     placeholder="Start Date"
                     value={updateText.expStart}
@@ -57,6 +58,7 @@ function ExperienceForm() {
                 />
                 <DateFormatter
                     type="text"
+                    options={{ date: true, datePattern: ["m", "d", "Y"] }}
                     name="expEnd"
                     placeholder="End Date"
                     value={updateText.expEnd}
@@ -88,6 +90,18 @@ const InputWrapper = styled.input`
     width: 95%;
     line-height: 2;
     margin: 0 auto;
+    background-color: #141b24;
+    border-radius: 0.3rem;
+    padding-left: 2%;
+    &::placeholder {
+        opacity: 0.5;
+    }
+`;
+
+const DateFormatter = styled(Cleave)`
+    line-height: 2;
+    margin: 0;
+    width: 49%;
     background-color: #141b24;
     border-radius: 0.3rem;
     padding-left: 2%;
