@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# CV-Creator - ## The Odin Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Features
 
-## Available Scripts
+### `Inline text editing`
 
-In the project directory, you can run:
+On the CV Preview card, click any submitted value to enable inline text editing.\
+Press 'enter' or click outside of the text-field to submit.\
+Press 'escape' to discard your edits.
 
-### `npm start`
+### `Auto-formatting for Dates and Phone Numbers`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Don't worry about typing dashes for phone numbers, or even the leading zeros for dates.\
+(Typing 3/5/2021 will format to 03/05/2021).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### `Export CV to a PDF File`
 
-### `npm test`
+At any time, click the 'Create PDF' button to export your current CV to a PDF that you\
+can download to your machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `Libraries used`
 
-### `npm run build`
+[React.js](https://reactjs.org/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[Cleave.js](https://nosir.github.io/cleave.js/) - For text formatting.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[react-inline-editing](https://www.npmjs.com/package/react-inline-edition) - For inline text editing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[react-to-print](https://www.npmjs.com/package/react-to-print) - For exporting to PDF.
 
-### `npm run eject`
+[styled-componenets](https://styled-components.com/) - For adding CSS styles directly to React components.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[gh-pages](https://www.npmjs.com/package/gh-pages) - For easy deploying to Github Pages.
