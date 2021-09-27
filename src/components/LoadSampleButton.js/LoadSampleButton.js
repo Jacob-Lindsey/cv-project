@@ -17,7 +17,6 @@ const LoadSampleButton = () => {
         schoolDegree: SampleData.education[i].schoolDegree,
         schoolSubject: SampleData.education[i].schoolSubject,
       }
-      console.log(formattedData);
       cvData.setEducationSections(prev => ([...prev, formattedData]));
     }
     for (let i = 0; i < 2; i++) {
@@ -28,7 +27,6 @@ const LoadSampleButton = () => {
         expStart: SampleData.experience[i].expStart,
         expEnd: SampleData.experience[i].expEnd,       
       }
-      console.log(formattedData);
       cvData.setExperienceSections(prev => ([...prev, formattedData]));
     }
     cvData.setFirstName(SampleData.personal.firstName);

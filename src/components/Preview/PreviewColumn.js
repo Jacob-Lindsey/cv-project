@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import EditableLabel from 'react-inline-editing'
 import AppContext from '../../AppContext'
@@ -25,12 +25,15 @@ const PreviewColumn = React.forwardRef((props, ref) => {
                         inputWidth='100px'
                       />
                       &nbsp;&nbsp;-&nbsp;&nbsp;
-                      <EditableLabel text={item.schoolEnd} inputWidth='100px' />
+                      <EditableLabel
+                        text={item.schoolEnd}
+                        inputWidth='100px'
+                      />
                     </DateText>
                     <School>
                       <EditableLabel
                         text={item.schoolName}
-                        inputWidth='120px'
+                        inputWidth='160px'
                       />
                       ,&nbsp;&nbsp;
                       <EditableLabel
@@ -67,21 +70,34 @@ const PreviewColumn = React.forwardRef((props, ref) => {
                 <SubmittedSection key={index}>
                   <SectionContent>
                     <ExperienceDate>
-                      <EditableLabel text={item.expStart} inputWidth='100px' />
+                      <EditableLabel
+                        text={item.expStart}
+                        inputWidth='100px'
+                      />
                       &nbsp;&nbsp;-&nbsp;&nbsp;
-                      <EditableLabel text={item.expEnd} inputWidth='100px' />
+                      <EditableLabel
+                        text={item.expEnd}
+                        inputWidth='100px'
+                      />
                     </ExperienceDate>
                     <Position>
                       <EditableLabel
                         text={item.expPosition}
-                        inputWidth='140px'
+                        inputWidth='220px'
                       />
                     </Position>
                   </SectionContent>
                   <Company>
-                    <EditableLabel text={item.expCompany} inputWidth='120px' />
+                    <EditableLabel
+                      text={item.expCompany}
+                      inputWidth='200px'
+                      inputClassName="editing"
+                    />
                     ,&nbsp;&nbsp;&nbsp;
-                    <EditableLabel text={item.expCity} inputWidth='140px' />
+                    <EditableLabel
+                      text={item.expCity}
+                      inputWidth='180px'
+                    />
                   </Company>
                 </SubmittedSection>
               )
@@ -168,8 +184,11 @@ const HeaderContentContainer = styled.div`
 `
 
 const Name = styled.p`
+  color: rgb(229,229,229);
+  font-family: 'Montserrat';
   font-size: 2.5rem;
-  text-indent: 10%;
+  font-weight: 900;
+  text-indent: 1%;
   margin-bottom: 1%;
 `
 
@@ -184,11 +203,13 @@ const HeaderContent = styled.div`
 
 const HeaderTextTitle = styled.h4`
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 900;
+  font-style: italic;
 `
 
 const HeaderText = styled.div`
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 300;
   height: 2.1rem;
   line-height: 2.5rem;
   margin: 0 auto;
@@ -247,11 +268,14 @@ const SectionContent = styled.div`
   line-height: 2.5rem;
   margin: 0 auto;
 `
-
 const ExperienceDate = styled.div`
   display: flex;
   font-weight: 600;
   font-style: italic;
+  & input {
+    background-color: #19212c;
+    text-align: center;
+  }
 `
 
 const Position = styled.div`
@@ -262,6 +286,10 @@ const Position = styled.div`
   margin: 0 auto;
   min-width: 100%;
   text-align: right;
+  & input {
+    background-color: #19212c;
+    text-align: center;
+  }
 `
 
 const Company = styled.div`
@@ -275,12 +303,18 @@ const Company = styled.div`
   text-align: right;
   & input {
     background-color: #19212c;
+    font-size: 1.1rem;
+    text-align: center;
   }
 `
 
 const DateText = styled.div`
   display: flex;
   font-weight: 600;
+  & input {
+    background-color: #19212c;
+    text-align: center;
+  }
 `
 
 const School = styled.div`
@@ -291,6 +325,11 @@ const School = styled.div`
   line-height: 2.5rem;
   margin: 0 auto;
   min-width: 100%;
+  & input {
+    background-color: #19212c;
+    font-size: 1.1rem;
+    text-align: center;
+  }
 `
 
 const DegreeSubject = styled.div`
@@ -300,6 +339,11 @@ const DegreeSubject = styled.div`
   margin: 0 auto;
   font-size: 1.3rem;
   text-align: right;
+  & input {
+    background-color: #19212c;
+    font-size: 1.1rem;
+    text-align: center;
+  }
 `
 
 const PersonalInfoText = styled.p`

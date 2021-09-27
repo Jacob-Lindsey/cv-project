@@ -76,10 +76,10 @@ const  App = () => {
         <div>
           <Header />
           <div className="2xl:container flex mx-auto 2xl:flex-row h-screen">
-            <div className="bg-secondary flex-initial min-w-1/2 mr-4 p-4 h-5/6 column-col">
+            <div className="bg-secondary flex-initial min-w-1/2 mr-4 p-4 h-5/6 column-col shadow-md">
               <FormColumn />
             </div>
-            <div className="bg-secondary min-w-1/2 ml-4 h-5/6 column-col">
+            <div className="bg-secondary min-w-1/2 ml-4 h-5/6 column-col shadow-md">
               <PreviewColumn />
             </div>    
           </div>
