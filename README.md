@@ -1,4 +1,5 @@
-# CV-Creator - ## The Odin Project
+# CV-Creator 
+## The Odin Project
 
 ## Features
 
