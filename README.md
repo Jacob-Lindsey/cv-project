@@ -7,17 +7,17 @@
 On the CV Preview card, click any submitted value to enable inline text editing.\
 Press 'enter' or click outside of the text-field to submit.\
 Press 'escape' to discard your edits.\
- \
+
 ### **Auto-formatting for Dates and Phone Numbers**
 
 Don't worry about typing dashes for phone numbers, or even the leading zeros for dates.\
 (Typing 3/5/2021 will format to 03/05/2021).\
- \
+ 
 ### **Export CV to a PDF File**
 
 At any time, click the 'Create PDF' button to export your current CV to a PDF that you\
 can download to your machine.\
-\
+
 ### **Libraries used**
 
 - [React.js](https://reactjs.org/)
