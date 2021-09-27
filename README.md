@@ -1,4 +1,4 @@
-# **CV-Creator** - The Odin Project 
+# **CV-Creator**  -  The Odin Project 
 
 ## Features
 
@@ -20,14 +20,14 @@ can download to your machine.
 
 ### **Libraries used**
 
-[React.js](https://reactjs.org/)
+**[React.js]**(https://reactjs.org/)
 
-[Cleave.js](https://nosir.github.io/cleave.js/) - For text formatting.
+**[Cleave.js]**(https://nosir.github.io/cleave.js/) - For text formatting.
 
-[react-inline-editing](https://www.npmjs.com/package/react-inline-edition) - For inline text editing.
+**[react-inline-editing]**(https://www.npmjs.com/package/react-inline-edition) - For inline text editing.
 
-[react-to-print](https://www.npmjs.com/package/react-to-print) - For exporting to PDF.
+**[react-to-print]**(https://www.npmjs.com/package/react-to-print) - For exporting to PDF.
 
-[styled-componenets](https://styled-components.com/) - For adding CSS styles directly to React components.
+**[styled-componenets]**(https://styled-components.com/) - For adding CSS styles directly to React components.
 
-[gh-pages](https://www.npmjs.com/package/gh-pages) - For easy deploying to Github Pages.
+**[gh-pages]**(https://www.npmjs.com/package/gh-pages) - For easy deploying to Github Pages.
